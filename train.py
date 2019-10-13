@@ -107,12 +107,12 @@ def main():
 		help='Steps between running summary ops')
 	parser.add_argument('--embedding_interval', type=int, default=5000,
 		help='Steps between updating embeddings projection visualization')
-	parser.add_argument('--checkpoint_interval', type=int, default=2500,
+	parser.add_argument('--checkpoint_interval', type=int, default=300,
 		help='Steps between writing checkpoints')
 	parser.add_argument('--eval_interval', type=int, default=5000,
 		help='Steps between eval on test data')
-	parser.add_argument('--tacotron_train_steps', type=int, default=100000, help='total number of tacotron training steps')
-	parser.add_argument('--wavenet_train_steps', type=int, default=500000, help='total number of wavenet training steps')
+	parser.add_argument('--tacotron_train_steps', type=int, default=3000, help='total number of tacotron training steps') # Modif ! Default is 100000
+	parser.add_argument('--wavenet_train_steps', type=int, default=15000, help='total number of wavenet training steps') # Modif ! Default is 500000
 	parser.add_argument('--tf_log_level', type=int, default=1, help='Tensorflow C++ log level.')
 	parser.add_argument('--slack_url', default=None, help='slack webhook notification destination link')
 	args = parser.parse_args()
